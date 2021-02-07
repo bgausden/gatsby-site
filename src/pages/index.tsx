@@ -1,6 +1,8 @@
 import React from "react"
 import { Stack, Text, Link, FontWeights } from "office-ui-fabric-react"
 import "./index.css"
+import glow_corporate_logo from "../../static/Glow Corporate Vertical.svg"
+import DropZone from "../components/DropZone"
 
 const boldStyle = { root: { fontWeight: FontWeights.semibold } }
 
@@ -22,19 +24,23 @@ const App: React.FunctionComponent = () => {
       gap={15}
     >
       <img
-        src="https://raw.githubusercontent.com/Microsoft/just/master/packages/just-stack-uifabric/template/src/components/fabric.png"
+        src={glow_corporate_logo}
         alt="logo"
+        width="33%"
       />
       <Text variant="xxLarge" styles={boldStyle}>
-        Welcome to Your UI Fabric App
+        HSBC Xero Converter
       </Text>
-      <Text variant="large">
+      {/* <Text variant="large">
         For a guide on how to customize this project, check out the UI Fabric
         documentation.
       </Text>
       <Text variant="large" styles={boldStyle}>
         Essential Links
-      </Text>
+      </Text> */}
+      <Stack gap={15}>
+        {DropZone()}
+      </Stack>
       <Stack horizontal gap={15} horizontalAlign="center">
         <Link href="https://developer.microsoft.com/en-us/fabric">Docs</Link>
         <Link href="https://stackoverflow.com/questions/tagged/office-ui-fabric">
