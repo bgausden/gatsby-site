@@ -1,8 +1,10 @@
 import React from "react"
 import { Stack, Text, Link, FontWeights } from "office-ui-fabric-react"
 import "./index.css"
+// @ts-ignore
 import glow_corporate_logo from "../../static/Glow Corporate Vertical.svg"
 import DropZone from "../components/DropZone"
+import FileInput from "../components/FileInput"
 
 const boldStyle = { root: { fontWeight: FontWeights.semibold } }
 
@@ -23,11 +25,7 @@ const App: React.FunctionComponent = () => {
       className="App"
       gap={15}
     >
-      <img
-        src={glow_corporate_logo}
-        alt="logo"
-        width="33%"
-      />
+      <img src={glow_corporate_logo} alt="logo" width="33%" />
       <Text variant="xxLarge" styles={boldStyle}>
         HSBC Xero Converter
       </Text>
@@ -38,10 +36,9 @@ const App: React.FunctionComponent = () => {
       <Text variant="large" styles={boldStyle}>
         Essential Links
       </Text> */}
-      <Stack gap={15}>
-        {DropZone()}
-      </Stack>
-      <Stack horizontal gap={15} horizontalAlign="center">
+      {/* {FileInput()} */}
+      <Stack gap={15}>{DropZone()}</Stack>
+      {/* <Stack horizontal gap={15} horizontalAlign="center">
         <Link href="https://developer.microsoft.com/en-us/fabric">Docs</Link>
         <Link href="https://stackoverflow.com/questions/tagged/office-ui-fabric">
           Stack Overflow
@@ -64,7 +61,7 @@ const App: React.FunctionComponent = () => {
         <Link href="https://developer.microsoft.com/en-us/fabric#/styles/themegenerator">
           Theme
         </Link>
-      </Stack>
+      </Stack> */}
     </Stack>
   )
 }
